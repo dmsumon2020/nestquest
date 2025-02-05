@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Roboto", serif;
+  font-optical-sizing: auto;
+  font-size: 16px;
+  line-height: 25px;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  color: #7a7a7a;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #000;
+}
+
+/* normal swal */
+.swal2-icon-success .swal2-confirm {
+  padding: 12px 40px;
+  color: #fff;
+  background: #08aeeb;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  border: 1px solid #08aeeb;
+  transition: all 300ms ease-in-out;
+}
+
+.swal2-icon-success .swal2-confirm:hover {
+  background: #000;
+  color: #fff;
+  border-color: #000;
+}
+
+/* confirm swal  */
+
+.swal2-icon-warning .swal2-cancel {
+  background-color: rgb(119 199 32) !important;
+}
+.swal2-icon-warning .swal2-confirm {
+  background-color: rgb(221, 51, 51) !important;
+}
+.slick-prev,
+.slick-next {
+  display: none !important;
+}

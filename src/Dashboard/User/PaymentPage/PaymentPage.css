@@ -1,0 +1,19 @@
+.stripe-payment button {
+  padding: 0.5rem 1.5rem;
+  color: white;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  border: 1px solid white;
+  transition: all 0.3s ease-in-out;
+  background-color: #08aeeb;
+  margin-top: 20px;
+}
+
+.stripe-payment button:hover {
+  background-color: #000;
+}
+.payment-input-container {
+  border: 1px solid #08aeeb;
+  border-radius: 0.5rem;
+  padding: 10px;
+}
