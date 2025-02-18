@@ -4,6 +4,8 @@ import { useState } from "react";
 import userImage from "../../../assets/user.png";
 import logo from "../../../assets/logo.png";
 import Swal from "sweetalert2";
+import { Tooltip } from "react-tooltip";
+import { BiDownArrow } from "react-icons/bi";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -217,8 +219,12 @@ const Header = () => {
                   type="button"
                   className="flex items-center focus:outline-none"
                   aria-label="toggle profile dropdown"
+                  data-tooltip-id="profile-tooltip"
+                  data-tooltip-content={user?.displayName || "User"}
                   onClick={handleProfileImageClick}
                 >
+                  <Tooltip id="profile-tooltip" place="top" effect="solid" />
+
                   <div className="w-8 h-8 overflow-hidden border-2 border-gray-400 rounded-full">
                     <img
                       src={user?.photoURL || userImage}
@@ -230,6 +236,8 @@ const Header = () => {
                   <h3 className="mx-2 text-gray-700 lg:hiddenX">
                     {user?.displayName}
                   </h3>
+
+                  <BiDownArrow className="text-lg font-bold" />
                 </button>
 
                 {isDropdownOpen && (
