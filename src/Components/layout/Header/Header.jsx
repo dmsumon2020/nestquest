@@ -7,17 +7,24 @@ import Swal from "sweetalert2";
 import { Tooltip } from "react-tooltip";
 import { BiDownArrow } from "react-icons/bi";
 import "./header.css";
+import useUserRole from "../../../Hooks/useUserRole";
+import { GridLoader } from "react-spinners";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { userLogOut, user } = useAuth();
   const location = useLocation(); // Get current location
   const navigate = useNavigate(); // Navigate programmatically
+  //const { role, isLoading, isError, refetch } = useUserRole(user?.email);
+
+  //const { role, isLoading, isError, refetch } = useUserRole(email || "");
 
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const handleProfileImageClick = () => {
     setIsDropdownOpen(!isDropdownOpen);
   };
+
+  //console.log("Role: ", role);
 
   // const handleLinkClick = () => {
   //   setIsDropdownOpen(false); // Close dropdown when a link is clicked
@@ -55,7 +62,7 @@ const Header = () => {
     { name: "Dashboard", path: "/dashboard" },
   ];
 
-  // admin links
+  // admin dropdown links
   const dashboardLinksAdmin = [
     {
       to: "/dashboard/my-profile",
@@ -76,6 +83,50 @@ const Header = () => {
     {
       to: "/dashboard/advertise-properties",
       label: "Advertise Property",
+    },
+  ];
+
+  // agent dropdown links
+  const dashboardLinksAgent = [
+    {
+      to: "/dashboard/my-profile",
+      label: "Agent Profile",
+    },
+    {
+      to: "/dashboard/add-property",
+      label: "Add Property",
+    },
+    {
+      to: "/dashboard/added-property",
+      label: "My added properties",
+    },
+    {
+      to: "/dashboard/sold-properties",
+      label: "My sold properties",
+    },
+    {
+      to: "/dashboard/requested-properties",
+      label: "Requested properties",
+    },
+  ];
+
+  // users drop down links
+  const dashboardLinksUser = [
+    {
+      to: "/dashboard/my-profile",
+      label: "My Profile",
+    },
+    {
+      to: "/dashboard/wishlist",
+      label: "Wishlist",
+    },
+    {
+      to: "/dashboard/property-bought",
+      label: "Property Bought",
+    },
+    {
+      to: "/dashboard/my-reviews",
+      label: "My Reviews",
     },
   ];
 
@@ -260,17 +311,41 @@ const Header = () => {
                 {isDropdownOpen && (
                   <div className="absolute left-0 mt-2 w-48 bg-white border border-gray-300 rounded-md shadow-lg z-10">
                     <ul className="py-1">
-                      {dashboardLinksAdmin.map((link, index) => (
-                        <li key={index}>
-                          <Link
-                            //onClick={handleLinkClick}
-                            to={link.to}
-                            className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
-                          >
-                            {link.label}
-                          </Link>
-                        </li>
-                      ))}
+                      {/* {role === "admin" &&
+                        dashboardLinksAdmin.map((link, index) => (
+                          <li key={index}>
+                            <Link
+                              //onClick={handleLinkClick}
+                              to={link.to}
+                              className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                            >
+                              {link.label}
+                            </Link>
+                          </li>
+                        ))} */}
+                      {/* {role === "agent" &&
+                        dashboardLinksAgent.map((link, index) => (
+                          <li key={index}>
+                            <Link
+                              //onClick={handleLinkClick}
+                              to={link.to}
+                              className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                            >
+                              {link.label}
+                            </Link>
+                          </li>
+                        ))} */}
+                      {/* {(role === "user" || role === undefined) &&
+                        dashboardLinksUser.map((link, index) => (
+                          <li key={index}>
+                            <Link
+                              to={link.to}
+                              className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                            >
+                              {link.label}
+                            </Link>
+                          </li>
+                        ))} */}
                     </ul>
                   </div>
                 )}
