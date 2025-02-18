@@ -16,9 +16,9 @@ const Header = () => {
     setIsDropdownOpen(!isDropdownOpen);
   };
 
-  const handleLinkClick = () => {
-    setIsDropdownOpen(false); // Close dropdown when a link is clicked
-  };
+  // const handleLinkClick = () => {
+  //   setIsDropdownOpen(false); // Close dropdown when a link is clicked
+  // };
 
   const handleUserLogout = () => {
     Swal.fire({
