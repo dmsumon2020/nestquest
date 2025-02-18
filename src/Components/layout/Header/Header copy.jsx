@@ -1,4 +1,4 @@
-import { Link, NavLink, useLocation, useNavigate } from "react-router";
+import { NavLink, useLocation, useNavigate } from "react-router";
 import useAuth from "../../../Hooks/useAuth";
 import { useState } from "react";
 import userImage from "../../../assets/user.png";
@@ -10,15 +10,6 @@ const Header = () => {
   const { userLogOut, user } = useAuth();
   const location = useLocation(); // Get current location
   const navigate = useNavigate(); // Navigate programmatically
-
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const handleProfileImageClick = () => {
-    setIsDropdownOpen(!isDropdownOpen);
-  };
-
-  const handleLinkClick = () => {
-    setIsDropdownOpen(false); // Close dropdown when a link is clicked
-  };
 
   const handleUserLogout = () => {
     Swal.fire({
@@ -52,39 +43,15 @@ const Header = () => {
     { name: "Dashboard", path: "/dashboard" },
   ];
 
-  // admin links
-  const dashboardLinksAdmin = [
-    {
-      to: "/dashboard/my-profile",
-      label: "Admin Profile",
-    },
-    {
-      to: "/dashboard/manage-properties",
-      label: "Manage Properties",
-    },
-    {
-      to: "/dashboard/manage-users",
-      label: "Manage Users",
-    },
-    {
-      to: "/dashboard/manage-reviews",
-      label: "Manage Reviews",
-    },
-    {
-      to: "/dashboard/advertise-properties",
-      label: "Advertise Property",
-    },
-  ];
-
   const handleLogoClick = () => {
     if (location.pathname !== "/") {
       navigate("/"); // Redirect to home if not already on the home page
     }
   };
 
-  // const handleProfileImageClick = () => {
-  //   navigate("/dashboard/my-profile");
-  // };
+  const handleProfileImageClick = () => {
+    navigate("/dashboard/my-profile");
+  };
 
   return (
     <nav className="relative  bg-white shadow-lg border-b-4 border-b-primaryColor">
@@ -212,44 +179,29 @@ const Header = () => {
                 </svg>
               </button>
 
-              <div className="relative">
-                <button
-                  type="button"
-                  className="flex items-center focus:outline-none"
-                  aria-label="toggle profile dropdown"
+              <button
+                type="button"
+                className="flex items-center focus:outline-none"
+                aria-label="toggle profile dropdown"
+              >
+                <div
                   onClick={handleProfileImageClick}
+                  className="w-8 h-8 overflow-hidden border-2 border-gray-400 rounded-full"
                 >
-                  <div className="w-8 h-8 overflow-hidden border-2 border-gray-400 rounded-full">
-                    <img
-                      src={user?.photoURL || userImage}
-                      className="user-img first-line:object-cover w-full h-full"
-                      alt="avatar"
-                    />
-                  </div>
+                  <img
+                    src={user?.photoURL || userImage}
+                    className="user-img first-line:object-cover w-full h-full"
+                    alt="avatar"
+                  />
+                </div>
 
-                  <h3 className="mx-2 text-gray-700 lg:hiddenX">
-                    {user?.displayName}
-                  </h3>
-                </button>
-
-                {isDropdownOpen && (
-                  <div className="absolute left-0 mt-2 w-48 bg-white border border-gray-300 rounded-md shadow-lg z-10">
-                    <ul className="py-1">
-                      {dashboardLinksAdmin.map((link, index) => (
-                        <li key={index}>
-                          <Link
-                            //onClick={handleLinkClick}
-                            to={link.to}
-                            className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
-                          >
-                            {link.label}
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
-              </div>
+                <h3
+                  onClick={handleProfileImageClick}
+                  className="mx-2 text-gray-700  lg:hiddenX"
+                >
+                  {user?.displayName}
+                </h3>
+              </button>
             </div>
           </div>
         </div>
