@@ -1,11 +1,12 @@
 import { Link, NavLink, useLocation, useNavigate } from "react-router";
 import useAuth from "../../../Hooks/useAuth";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import userImage from "../../../assets/user.png";
 import logo from "../../../assets/logo.png";
 import Swal from "sweetalert2";
 import { Tooltip } from "react-tooltip";
 import { BiDownArrow } from "react-icons/bi";
+import "./header.css";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -88,15 +89,31 @@ const Header = () => {
   //   navigate("/dashboard/my-profile");
   // };
 
+  const [isScrolled, setIsScrolled] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50); // Adjust scroll threshold as needed
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <nav className="relative  bg-white shadow-lg border-b-4 border-b-primaryColor">
+    <nav
+      className={`relative  bg-white shadow-lg border-b-4 border-b-primaryColor transition-all duration-300  ${
+        isScrolled ? "scroll-menu" : ""
+      }`}
+    >
       <div className="container px-6 py-4 mx-auto">
         <div className="lg:flex lg:items-center lg:justify-between">
           <div className="flex items-center justify-between">
             <a onClick={handleLogoClick} className="cursor-pointer">
               {/* <img className="w-auto h-6 sm:h-7" src={logo} alt="Meraki UI" /> */}
               <img
-                className="w-auto h-auto max-h-[50px]"
+                className="logo w-auto h-auto max-h-[50px]"
                 src={logo}
                 alt="Meraki UI"
               />

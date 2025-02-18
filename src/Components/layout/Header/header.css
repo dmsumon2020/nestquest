@@ -1,0 +1,17 @@
+.scroll-menu {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  margin-top: 10px;
+}
+
+.scroll-menu div.container {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.scroll-menu .logo {
+  max-height: 35px;
+}
