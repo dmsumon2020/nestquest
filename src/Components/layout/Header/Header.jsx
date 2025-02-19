@@ -306,17 +306,16 @@ const Header = () => {
                     {user?.displayName}
                   </h3>
 
-                  <BiDownArrow className="text-lg font-bold" />
+                  {user && <BiDownArrow className="text-lg font-bold" />}
                 </button>
 
-                {isDropdownOpen && (
+                {isDropdownOpen && user && (
                   <div className="absolute left-0 mt-2 w-48 bg-white border border-gray-300 rounded-md shadow-lg z-10">
                     <ul className="py-1">
                       {role === "admin" &&
                         dashboardLinksAdmin.map((link, index) => (
                           <li key={index}>
                             <Link
-                              //onClick={handleLinkClick}
                               to={link.to}
                               className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
                             >
@@ -328,7 +327,6 @@ const Header = () => {
                         dashboardLinksAgent.map((link, index) => (
                           <li key={index}>
                             <Link
-                              //onClick={handleLinkClick}
                               to={link.to}
                               className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
                             >
