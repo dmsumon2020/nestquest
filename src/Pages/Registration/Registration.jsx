@@ -229,13 +229,13 @@ const Registration = () => {
 
   return (
     <>
-      <section className="bg-sectionBgColor py-20">
+      <section className="bg-sectionBgColor py-20 dark:bg-[#323e4f]">
         <div className="heading-container w-11/12 md:w-9/12 mx-auto">
           <h4 className="font-subheadingFont text-[40px] leading-[40px] text-center text-primaryColor md:pt-10 pb-2">
             Just in few steps
           </h4>
 
-          <h3 className="font-headingFont text-[30px] leading-[30px] md:text-[55px] md:leading-[55px] font-bold text-center text-[#111] pb-[4rem]">
+          <h3 className="font-headingFont text-[30px] leading-[30px] md:text-[55px] md:leading-[55px] font-bold text-center text-[#111] pb-[4rem] dark:text-white">
             Become a registered user
           </h3>
         </div>
