@@ -45,7 +45,9 @@ const SoldProperties = () => {
 
   return (
     <div className="p-4">
-      <h2 className="text-5xl font-thin text-center pb-10">Sold Properties</h2>
+      <h2 className="text-5xl font-thin text-center pb-10 dark:text-white">
+        Sold Properties
+      </h2>
       <div className="overflow-x-auto">
         {soldProperties.length === 0 ? (
           <div className="text-center text-gray-600">
@@ -81,25 +83,25 @@ const SoldProperties = () => {
             <tbody>
               {soldProperties.map((property, index) => (
                 <tr key={property._id}>
-                  <td className="border border-primaryColor px-4 py-2">
+                  <td className="border border-primaryColor px-4 py-2 dark:bg-[#323e4f] dark:text-[#ccc]">
                     {index + 1}
                   </td>
-                  <td className="border border-primaryColor px-4 py-2">
+                  <td className="border border-primaryColor px-4 py-2 dark:bg-[#323e4f] dark:text-[#ccc]">
                     {property.propertyName}
                   </td>
-                  <td className="border border-primaryColor px-4 py-2">
+                  <td className="border border-primaryColor px-4 py-2 dark:bg-[#323e4f] dark:text-[#ccc]">
                     {property.propertyLocation}
                   </td>
-                  <td className="border border-primaryColor px-4 py-2">
+                  <td className="border border-primaryColor px-4 py-2 dark:bg-[#323e4f] dark:text-[#ccc]">
                     {property.buyerName}
                   </td>
-                  <td className="border border-primaryColor px-4 py-2">
+                  <td className="border border-primaryColor px-4 py-2 dark:bg-[#323e4f] dark:text-[#ccc]">
                     {property.buyerEmail}
                   </td>
-                  <td className="border border-primaryColor px-4 py-2">
+                  <td className="border border-primaryColor px-4 py-2 dark:bg-[#323e4f] dark:text-[#ccc]">
                     {property.status === "bought" ? "Yes" : "No"}
                   </td>
-                  <td className="border border-primaryColor px-4 py-2">
+                  <td className="border border-primaryColor px-4 py-2 dark:bg-[#323e4f] dark:text-[#ccc]">
                     ${parseFloat(property.offeredAmount).toLocaleString()}
                   </td>
                 </tr>
@@ -109,11 +111,11 @@ const SoldProperties = () => {
               <tr>
                 <td
                   colSpan="6"
-                  className="border border-primaryColor px-4 py-2 font-bold text-right"
+                  className="border border-primaryColor px-4 py-2 font-bold text-right dark:bg-[#323e4f] dark:text-[#ccc]"
                 >
                   Total Value:
                 </td>
-                <td className="border border-primaryColor px-4 py-2 font-bold">
+                <td className="border border-primaryColor px-4 py-2 font-bold dark:bg-[#323e4f] dark:text-[#ccc]">
                   ${totalValue.toLocaleString()}
                 </td>
               </tr>

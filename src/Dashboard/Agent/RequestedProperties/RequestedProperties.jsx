@@ -70,7 +70,7 @@ const RequestedProperties = () => {
 
   return (
     <div className="p-6">
-      <h2 className="text-5xl font-thin text-center pb-10">
+      <h2 className="text-5xl font-thin text-center pb-10 dark:text-white">
         Requested Properties
       </h2>
       <div className="overflow-x-auto">
@@ -108,25 +108,25 @@ const RequestedProperties = () => {
             <tbody>
               {offers.map((offer) => (
                 <tr key={offer._id}>
-                  <td className="border border-primaryColor px-4 py-2">
+                  <td className="border border-primaryColor px-4 py-2 dark:bg-[#323e4f] dark:text-[#ccc]">
                     {offer.propertyName}
                   </td>
-                  <td className="border border-primaryColor px-4 py-2">
+                  <td className="border border-primaryColor px-4 py-2 dark:bg-[#323e4f] dark:text-[#ccc]">
                     {offer.propertyLocation}
                   </td>
-                  <td className="border border-primaryColor px-4 py-2">
+                  <td className="border border-primaryColor px-4 py-2 dark:bg-[#323e4f] dark:text-[#ccc]">
                     {offer.buyerName}
                   </td>
-                  <td className="border border-primaryColor px-4 py-2">
+                  <td className="border border-primaryColor px-4 py-2 dark:bg-[#323e4f] dark:text-[#ccc]">
                     {offer.buyerEmail}
                   </td>
-                  <td className="border border-primaryColor px-4 py-2">
+                  <td className="border border-primaryColor px-4 py-2 dark:bg-[#323e4f] dark:text-[#ccc]">
                     ${offer.offeredAmount}
                   </td>
-                  <td className="border border-primaryColor px-4 py-2">
+                  <td className="border border-primaryColor px-4 py-2 dark:bg-[#323e4f] dark:text-[#ccc]">
                     {offer.status}
                   </td>
-                  <td className="border border-primaryColor px-4 py-2 text-center">
+                  <td className="border border-primaryColor px-4 py-2 text-center dark:bg-[#323e4f] dark:text-[#ccc]">
                     {offer.status === "pending" ? (
                       <>
                         <button

@@ -92,7 +92,9 @@ const UserReviews = () => {
 
   return (
     <div className="p-4">
-      <h2 className="text-5xl font-thin text-center pb-10">My Reviews</h2>
+      <h2 className="text-5xl font-thin text-center pb-10 dark:text-white">
+        My Reviews
+      </h2>
       {reviews.length === 0 ? (
         <p className="text-gray-500">No reviews have been made yet!</p>
       ) : (
@@ -100,17 +102,21 @@ const UserReviews = () => {
           {reviews.map((review) => (
             <div
               key={review._id}
-              className="border p-4 rounded-lg shadow-sm bg-white"
+              className="border p-4 rounded-lg shadow-sm bg-white dark:bg-[#323e4f] dark:border-gray-800"
             >
-              <h3 className="text-lg font-bold">{review.propertyTitle}</h3>
-              <p className="text-gray-600 text-sm">
+              <h3 className="text-lg font-bold dark:text-white">
+                {review.propertyTitle}
+              </h3>
+              <p className="text-gray-600 text-sm dark:text-[#ccc]">
                 Agent: {review.reviewerName}
               </p>
-              <p className="text-gray-500 text-xs">
+              <p className="text-gray-500 text-xs dark:text-[#ccc]">
                 Reviewed on: {new Date(review.date).toLocaleDateString()} at{" "}
                 {new Date(review.date).toLocaleTimeString()}
               </p>
-              <p className="mt-2">{review.reviewDescription}</p>
+              <p className="mt-2 dark:text-[#ccc]">
+                {review.reviewDescription}
+              </p>
               <button
                 onClick={() => handleDelete(review._id)}
                 className="mt-4 px-4 py-2 bg-red-500 text-white text-sm rounded-lg"

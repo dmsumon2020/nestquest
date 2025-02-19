@@ -77,30 +77,38 @@ const Wishlist = () => {
   }
   return (
     <div className="w-11/12 md:w-9/12 mx-auto mt-6">
-      <h2 className="text-5xl font-thin text-center pb-10">Your Wishlist</h2>
+      <h2 className="text-5xl font-thin text-center pb-10 dark:text-white">
+        Your Wishlist
+      </h2>
       <div className="grid grid-cols-1  lg:grid-cols-3 gap-6">
         {wishlist[0]?.properties?.map((property) => (
           <div
             key={property.propertyId}
-            className="border p-4 rounded shadow bg-white relative"
+            className="border p-4 rounded shadow bg-white relative dark:bg-[#323e4f] dark:border-gray-800"
           >
             <img
               src={property.image}
               alt={property.title}
               className="w-full h-48 object-cover rounded mb-4"
             />
-            <h3 className="text-xl font-bold">{property.title}</h3>
-            <p className="text-gray-600">{property.location}</p>
+            <h3 className="text-xl font-bold dark:text-white">
+              {property.title}
+            </h3>
+            <p className="text-gray-600 dark:text-[#ccc]">
+              {property.location}
+            </p>
             <div className="flex items-center mt-2">
               <img
                 src={property.agentImage}
                 alt={property.agentName}
                 className="w-10 h-10 rounded-full mr-2"
               />
-              <p className="text-sm text-gray-800">{property.agentName}</p>
+              <p className="text-sm text-gray-800 dark:text-[#ccc]">
+                {property.agentName}
+              </p>
             </div>
             <p
-              className={`text-xs font-semibold inline-block py-1 px-3 ${
+              className={`text-xs font-semibold inline-block py-1 px-3 dark:bg-[#a4a4a4] dark:text-white ${
                 property.verificationStatus === "verified"
                   ? "bg-[#7d2eff33] text-[#7d2eff]"
                   : "text-red-600"
@@ -108,7 +116,7 @@ const Wishlist = () => {
             >
               <span>{property.verificationStatus}</span>
             </p>
-            <p className="text-gray-800 mt-2 font-medium">
+            <p className="text-gray-800 mt-2 font-medium dark:text-white">
               Price Range: ${property.minimumPrice.toLocaleString()} - $
               {property.maximumPrice.toLocaleString()}
             </p>

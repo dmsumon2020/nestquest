@@ -265,12 +265,14 @@ const AddProperty = () => {
 
   return (
     <>
-      <h2 className="text-5xl font-thin text-center pb-10">Add Property</h2>
-      <div className="max-w-4xl p-6 mx-auto bg-white rounded-md shadow-md">
+      <h2 className="text-5xl font-thin text-center pb-10 dark:text-white">
+        Add Property
+      </h2>
+      <div className="max-w-4xl p-6 mx-auto bg-white rounded-md shadow-md dark:bg-[#323e4f]">
         <form onSubmit={handleSubmit}>
           <div className="grid grid-cols-1 gap-6 mt-4 sm:grid-cols-2">
             <div>
-              <label className="text-gray-700" htmlFor="title">
+              <label className="text-gray-700 dark:text-white" htmlFor="title">
                 Title
               </label>
               <input
@@ -279,7 +281,8 @@ const AddProperty = () => {
                 type="text"
                 value={formData.title}
                 onChange={handleChange}
-                className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring"
+                className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring dark:bg-gray-800 dark-border-gray-800 dark:text-white
+"
               />
               {errors.title && (
                 <p className="mt-2 text-sm text-red-600">{errors.title}</p>
@@ -287,7 +290,10 @@ const AddProperty = () => {
             </div>
 
             <div>
-              <label className="text-gray-700" htmlFor="location">
+              <label
+                className="text-gray-700 dark:text-white"
+                htmlFor="location"
+              >
                 Location
               </label>
               <input
@@ -296,7 +302,7 @@ const AddProperty = () => {
                 type="text"
                 value={formData.location}
                 onChange={handleChange}
-                className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring"
+                className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 dark:bg-gray-800 dark-border-gray-800 dark:text-white rounded-md focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring"
               />
               {errors.location && (
                 <p className="mt-2 text-sm text-red-600">{errors.location}</p>
@@ -304,7 +310,7 @@ const AddProperty = () => {
             </div>
 
             <div>
-              <label className="text-gray-700" htmlFor="city">
+              <label className="text-gray-700 dark:text-white" htmlFor="city">
                 City
               </label>
               <input
@@ -313,7 +319,7 @@ const AddProperty = () => {
                 type="text"
                 value={formData.city}
                 onChange={handleChange}
-                className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring"
+                className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 dark:bg-gray-800 dark-border-gray-800 dark:text-white rounded-md focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring"
               />
               {errors.city && (
                 <p className="mt-2 text-sm text-red-600">{errors.city}</p>
@@ -321,7 +327,7 @@ const AddProperty = () => {
             </div>
 
             <div>
-              <label className="text-gray-700 " htmlFor="image">
+              <label className="text-gray-700 dark:text-white" htmlFor="image">
                 Image Upload
               </label>
               <input
@@ -330,7 +336,7 @@ const AddProperty = () => {
                 type="file"
                 accept="image/*"
                 onChange={handleImageUpload}
-                className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring"
+                className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 dark:bg-gray-800 dark-border-gray-800 dark:text-white rounded-md focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring"
               />
               {errors.image && (
                 <p className="mt-2 text-sm text-red-600">{errors.image}</p>
@@ -338,7 +344,10 @@ const AddProperty = () => {
             </div>
 
             <div>
-              <label className="text-gray-700" htmlFor="agentName">
+              <label
+                className="text-gray-700 dark:text-white"
+                htmlFor="agentName"
+              >
                 Agent Name
               </label>
               <input
@@ -347,12 +356,15 @@ const AddProperty = () => {
                 type="text"
                 value={formData.agentName}
                 readOnly
-                className="block w-full px-4 py-2 mt-2 text-gray-700 bg-gray-200 border border-gray-300 rounded-md focus:outline-none"
+                className="block w-full px-4 py-2 mt-2 text-gray-700 bg-gray-200 border border-gray-300 dark:bg-gray-800 dark-border-gray-800 dark:text-white rounded-md focus:outline-none"
               />
             </div>
 
             <div>
-              <label className="text-gray-700" htmlFor="agentEmail">
+              <label
+                className="text-gray-700 dark:text-white"
+                htmlFor="agentEmail"
+              >
                 Agent Email
               </label>
               <input
@@ -361,12 +373,15 @@ const AddProperty = () => {
                 type="email"
                 value={formData.agentEmail}
                 readOnly
-                className="block w-full px-4 py-2 mt-2 text-gray-700 bg-gray-200 border border-gray-300 rounded-md focus:outline-none"
+                className="block w-full px-4 py-2 mt-2 text-gray-700 bg-gray-200 border border-gray-300 dark:bg-gray-800 dark-border-gray-800 dark:text-white rounded-md focus:outline-none"
               />
             </div>
 
             <div>
-              <label className="text-gray-700" htmlFor="minimumPrice">
+              <label
+                className="text-gray-700 dark:text-white"
+                htmlFor="minimumPrice"
+              >
                 Minimum Price
               </label>
               <input
@@ -375,7 +390,7 @@ const AddProperty = () => {
                 type="number"
                 value={formData.minimumPrice}
                 onChange={handleChange}
-                className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring"
+                className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200  dark:bg-gray-800 dark-border-gray-800 dark:text-white rounded-md focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring"
               />
               {errors.minimumPrice && (
                 <p className="mt-2 text-sm text-red-600">
@@ -385,7 +400,10 @@ const AddProperty = () => {
             </div>
 
             <div>
-              <label className="text-gray-700" htmlFor="maximumPrice">
+              <label
+                className="text-gray-700 dark:text-white"
+                htmlFor="maximumPrice"
+              >
                 Maximum Price
               </label>
               <input
@@ -394,7 +412,7 @@ const AddProperty = () => {
                 type="number"
                 value={formData.maximumPrice}
                 onChange={handleChange}
-                className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring"
+                className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 dark:bg-gray-800 dark-border-gray-800 dark:text-white rounded-md focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring"
               />
               {errors.maximumPrice && (
                 <p className="mt-2 text-sm text-red-600">
@@ -404,7 +422,10 @@ const AddProperty = () => {
             </div>
 
             <div>
-              <label className="text-gray-700" htmlFor="propertyType">
+              <label
+                className="text-gray-700 dark:text-white"
+                htmlFor="propertyType"
+              >
                 Property Type
               </label>
               <select
@@ -412,7 +433,7 @@ const AddProperty = () => {
                 name="propertyType"
                 value={formData.propertyType}
                 onChange={handleChange}
-                className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring"
+                className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 dark:bg-gray-800 dark-border-gray-800 dark:text-white rounded-md focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring"
               >
                 <option value="">Select Type</option>
                 <option value="apartment">Apartment</option>
@@ -429,7 +450,10 @@ const AddProperty = () => {
             </div>
 
             <div className="sm:col-span-2">
-              <label className="text-gray-700" htmlFor="description">
+              <label
+                className="text-gray-700 dark:text-white"
+                htmlFor="description"
+              >
                 Description
               </label>
               <textarea
@@ -438,7 +462,7 @@ const AddProperty = () => {
                 value={formData.description}
                 onChange={handleChange}
                 rows="4"
-                className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring"
+                className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 dark:bg-gray-800 dark-border-gray-800 dark:text-white rounded-md focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring"
               ></textarea>
               {errors.description && (
                 <p className="mt-2 text-sm text-red-600">

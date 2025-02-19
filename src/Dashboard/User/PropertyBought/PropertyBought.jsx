@@ -27,14 +27,14 @@ const PropertyBought = () => {
 
   return (
     <div className="w-11/12 md:w-9/12 mx-auto mt-6">
-      <h2 className="text-5xl font-thin text-center pb-10">
+      <h2 className="text-5xl font-thin text-center pb-10 dark:text-white">
         Your Bought Properties
       </h2>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 p-4">
         {properties.map((property) => (
           <div
             key={property._id}
-            className="border rounded shadow p-4 bg-white flex flex-col"
+            className="border rounded shadow p-4 bg-white flex flex-col dark:bg-[#323e4f] dark:border-gray-800"
           >
             {/* Property Image */}
             <img
@@ -44,16 +44,18 @@ const PropertyBought = () => {
             />
 
             {/* Property Information */}
-            <h3 className="text-lg font-bold mb-2">{property.propertyName}</h3>
-            <p>
+            <h3 className="text-lg font-bold mb-2 dark:text-white">
+              {property.propertyName}
+            </h3>
+            <p className="dark:text-[#ccc]">
               <span className="font-semibold">Location:</span>{" "}
               {property.propertyLocation}
             </p>
-            <p>
+            <p className="dark:text-[#ccc]">
               <span className="font-semibold">Agent Name:</span>{" "}
               {property.agentEmail}
             </p>
-            <p>
+            <p className="dark:text-[#ccc]">
               <span className="font-semibold">Offered Amount:</span> $
               {parseInt(property.offeredAmount).toLocaleString()}
             </p>
