@@ -156,7 +156,7 @@ const Header = () => {
 
   return (
     <nav
-      className={`relative  bg-white shadow-lg border-b-4 border-b-primaryColor transition-all duration-300  ${
+      className={`relative  bg-white shadow-lg border-b-4 border-b-primaryColor transition-all duration-300 dark:bg-gray-800  ${
         isScrolled ? "scroll-menu" : ""
       }`}
     >
@@ -217,7 +217,7 @@ const Header = () => {
 
           {/* Mobile Menu */}
           <div
-            className={`absolute inset-x-0 z-20 w-full px-6 py-4 transition-all duration-300 ease-in-out bg-white lg:mt-0 lg:p-0 lg:top-0 lg:relative lg:bg-transparent lg:w-auto lg:opacity-100 lg:translate-x-0 lg:flex lg:items-center ${
+            className={`absolute inset-x-0 z-20 w-full px-6 py-4 transition-all duration-300 ease-in-out bg-white dark:bg-gray-800 lg:mt-0 lg:p-0 lg:top-0 lg:relative lg:bg-transparent lg:w-auto lg:opacity-100 lg:translate-x-0 lg:flex lg:items-center ${
               isOpen
                 ? "translate-x-0 opacity-100"
                 : "opacity-0 -translate-x-full"
@@ -229,7 +229,7 @@ const Header = () => {
                   key={index}
                   to={link.path}
                   className={({ isActive }) =>
-                    `px-3 py-2 mx-3 mt-2 text-gray-700 transition-colors duration-300 transform rounded-md lg:mt-0 font-bold ${
+                    `px-3 py-2 mx-3 mt-2 text-gray-700 dark:text-white transition-colors duration-300 transform rounded-md lg:mt-0 font-bold ${
                       isActive ? "text-primaryColor" : "hover:bg-gray-100"
                     }`
                   }
@@ -241,14 +241,14 @@ const Header = () => {
               {user ? (
                 <NavLink
                   onClick={handleUserLogout}
-                  className="px-3 py-2 mx-3 mt-2 text-gray-700 transition-colors duration-300 transform rounded-md lg:mt-0  hover:bg-gray-100 font-bold"
+                  className="px-3 py-2 mx-3 mt-2 text-gray-700 dark:text-white transition-colors duration-300 transform rounded-md lg:mt-0  hover:bg-gray-100 font-bold"
                 >
                   Logout
                 </NavLink>
               ) : (
                 <NavLink
                   to={"/signin"}
-                  className="px-3 py-2 mx-3 mt-2 text-gray-700 transition-colors duration-300 transform rounded-md lg:mt-0  hover:bg-gray-100 font-bold"
+                  className="px-3 py-2 mx-3 mt-2 text-gray-700 dark:text-white transition-colors duration-300 transform rounded-md lg:mt-0  hover:bg-gray-100 font-bold"
                 >
                   Signin
                 </NavLink>
@@ -256,7 +256,7 @@ const Header = () => {
               {!user && (
                 <NavLink
                   to={"/registration"}
-                  className="px-3 py-2 mx-3 mt-2 text-gray-700 transition-colors duration-300 transform rounded-md lg:mt-0  hover:bg-gray-100 font-bold"
+                  className="px-3 py-2 mx-3 mt-2 text-gray-700 dark:text-white transition-colors duration-300 transform rounded-md lg:mt-0  hover:bg-gray-100 font-bold"
                 >
                   Registration
                 </NavLink>
@@ -266,7 +266,7 @@ const Header = () => {
 
             <div className="flex items-center mt-4 lg:mt-0">
               <button
-                className="hidden mx-4 text-gray-600 transition-colors duration-300 transform lg:block  hover:text-gray-700  focus:text-gray-700  focus:outline-none"
+                className="hidden mx-4 text-gray-600 dark:text-white transition-colors duration-300 transform lg:block  hover:text-gray-700  focus:text-gray-700  focus:outline-none"
                 aria-label="show notifications"
               >
                 <svg
