@@ -44,7 +44,7 @@ const ImageSlider = () => {
   }
 
   return (
-    <section>
+    <section className="bg-white dark:bg-gray-800">
       <Slider {...settings}>
         {data.map((slider, index) => (
           <div

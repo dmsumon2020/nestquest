@@ -36,8 +36,12 @@ const CategoriesFromDb = () => {
 
   return (
     <>
-      <Fade triggerOnce={true} delay={300}>
-        <section className="w-11/12 md:w-9/12 mx-auto py-16 md:py-32">
+      <section className="py-16 md:py-32 dark:bg-gray-800">
+        <Fade
+          triggerOnce={true}
+          delay={300}
+          className="w-11/12 md:w-9/12 mx-auto"
+        >
           <SectionHeader
             heading="Explore The Neightborhood​"
             subHeading="There are various property options available, each designed to help you create a fully customized and polished site."
@@ -79,8 +83,8 @@ const CategoriesFromDb = () => {
               </div>
             ))}
           </div>
-        </section>
-      </Fade>
+        </Fade>
+      </section>
     </>
   );
 };

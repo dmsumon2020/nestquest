@@ -31,7 +31,7 @@ const Advertisement = () => {
   if (error) return <div>Error loading data!</div>;
 
   return (
-    <section className="bg-sectionBgColor py-16 md:py-32">
+    <section className="bg-sectionBgColor dark:bg-gray-800 py-16 md:py-32">
       <div className="section-wrap w-11/12 md:w-9/12 mx-auto">
         <SectionHeader
           heading="Advertised Properties"
