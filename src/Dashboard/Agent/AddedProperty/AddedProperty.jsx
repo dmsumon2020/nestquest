@@ -103,20 +103,20 @@ const AddedProperty = () => {
 
   return (
     <div>
-      <h2 className="text-5xl font-thin text-center pb-10">
+      <h2 className="text-5xl font-thin text-center pb-10 dark:text-white">
         My Added Properties
       </h2>
 
       {properties.length === 0 ? (
-        <div className="text-center text-gray-600">
-          <p className="text-2xl">You haven't added any properties yet.</p>
+        <div className="text-center text-gray-600 dark:text-white">
+          <p className="text-2xl ">You haven't added any properties yet.</p>
         </div>
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {properties.map((property) => (
             <div
               key={property._id}
-              className="border rounded-lg shadow-md p-4 bg-white"
+              className="border rounded-lg shadow-md p-4 bg-white dark:bg-[#323e4f] dark:border-gray-800"
             >
               {/* Property Image */}
               <img
