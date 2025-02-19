@@ -19,7 +19,7 @@ const FinestSelection = () => {
 
             {/* Info Section */}
             <div className="info absolute inset-0 flex flex-col justify-center text-white py-12 w-10/12 lg:w-7/12 mx-auto">
-              <div className="bg-primaryColor p-12 md:w-3/5">
+              <div className="bg-primaryColor p-12 md:w-3/5 dark:bg-[#323e4f]">
                 <h4 className="mb-4 text-white text-5xl font-light">
                   Discover Our Finest Selection
                 </h4>

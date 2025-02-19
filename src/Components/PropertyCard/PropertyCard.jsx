@@ -5,7 +5,7 @@ import { Link } from "react-router";
 
 const PropertyCard = ({ property }) => {
   return (
-    <div className="bg-white shadow-md">
+    <div className="bg-white shadow-md dark:bg-[#323e4f]">
       <img
         src={property.image}
         alt={property.title}
@@ -14,30 +14,30 @@ const PropertyCard = ({ property }) => {
       <div className="p-4">
         <div>
           {property.featured === "yes" && (
-            <span className="text-[#009868] text-xs bg-[#E5F5EF] py-1 px-3 mr-2">
+            <span className="text-[#009868] text-xs bg-[#E5F5EF] py-1 px-3 mr-2 dark:bg-[#a4a4a4] dark:text-white">
               Featured
             </span>
           )}{" "}
-          <span className="text-[#FF385C] text-xs bg-[#FFEAEE] py-1 px-3 mr-2">
+          <span className="text-[#FF385C] text-xs bg-[#FFEAEE] py-1 px-3 mr-2 dark:bg-[#a4a4a4] dark:text-white">
             {property.propertyType}
           </span>{" "}
           {property.verificationStatus === "verified" && (
-            <span className="text-[#7d2eff] text-xs bg-[#7d2eff33] py-1 px-3 mr-2">
+            <span className="text-[#7d2eff] text-xs bg-[#7d2eff33] py-1 px-3 mr-2 dark:bg-[#a4a4a4] dark:text-white">
               Verified
             </span>
           )}{" "}
         </div>
         <Link to={`/property-details/${property._id}`}>
-          <h3 className="text-xl  pt-5 pb-1 transition-colors duration-300 ease-in-out hover:text-primaryColor">
+          <h3 className="text-xl  pt-5 pb-1 transition-colors duration-300 ease-in-out hover:text-primaryColor dark:text-white">
             {property.title}
           </h3>
         </Link>
-        <p className="text-sm flex flex-row items-center gap-2 mb-8">
+        <p className="text-sm flex flex-row items-center gap-2 mb-8 dark:text-[#ccc]">
           <MdLocationPin />
           {property.location}
         </p>
 
-        <div className="text-sm flex flex-row items-center gap-2">
+        <div className="text-sm flex flex-row items-center gap-2 dark:text-[#ccc]">
           <p className="flex flex-row items-center gap-3">
             <IoBedOutline />
             {property.bedrooms} Beds

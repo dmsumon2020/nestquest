@@ -166,18 +166,18 @@ const SignIn = () => {
   };
 
   return (
-    <section className="bg-sectionBgColor  py-20">
+    <section className="bg-sectionBgColor py-20 dark:bg-[#323e4f]">
       <div className="heading-container w-11/12 md:w-9/12 mx-auto">
         <h4 className="font-subheadingFont text-[40px] leading-[40px] text-center text-primaryColor md:pt-10 pb-2">
           To use our services Pls...
         </h4>
 
-        <h3 className="font-headingFont text-[30px] leading-[30px] md:text-[55px] md:leading-[55px] font-bold text-center text-[#111] pb-[4rem]">
+        <h3 className="font-headingFont text-[30px] leading-[30px] md:text-[55px] md:leading-[55px] font-bold text-center text-[#111] pb-[4rem] dark:text-white">
           Login Here
         </h3>
       </div>
 
-      <div className="w-full max-w-sm p-6 m-auto mx-auto bg-white rounded-lg shadow-md">
+      <div className="w-full max-w-sm p-6 m-auto mx-auto bg-white rounded-lg shadow-md dark:bg-gray-800">
         <div className="flex justify-center mx-auto">
           <img className="w-auto h-7 sm:h-8" src={logo} alt="Logo" />
         </div>
@@ -192,7 +192,7 @@ const SignIn = () => {
               id="email"
               name="email"
               ref={emailRef}
-              className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border rounded-lg focus:border-primaryColorHover focus:ring-primaryColor focus:outline-none focus:ring focus:ring-opacity-40"
+              className="block w-full px-4 py-2 mt-2 text-gray-700  border rounded-lg focus:border-primaryColorHover focus:ring-primaryColor focus:outline-none focus:ring focus:ring-opacity-40 dark:bg-[#323e4f] dark:text-white"
             />
             {errors.email && (
               <p className="mt-2 text-sm text-red-600">{errors.email}</p>
@@ -207,7 +207,7 @@ const SignIn = () => {
               <a
                 href="#"
                 onClick={handleRecoverPassword}
-                className="text-xs text-gray-600 hover:underline"
+                className="text-xs text-gray-600 hover:underline dark:text-white"
               >
                 Forget Password?
               </a>
@@ -217,7 +217,7 @@ const SignIn = () => {
               type="password"
               id="password"
               name="password"
-              className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border rounded-lg focus:border-primaryColorHover focus:ring-primaryColor focus:outline-none focus:ring focus:ring-opacity-40"
+              className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border rounded-lg focus:border-primaryColorHover focus:ring-primaryColor focus:outline-none focus:ring focus:ring-opacity-40 dark:bg-[#323e4f] dark:text-white"
             />
             {errors.password && (
               <p className="mt-2 text-sm text-red-600">{errors.password}</p>
@@ -239,7 +239,7 @@ const SignIn = () => {
 
           <a
             href="#"
-            className="text-xs text-center text-gray-500 uppercase hover:underline"
+            className="text-xs text-center text-gray-500 uppercase hover:underline dark:text-white"
           >
             or login with Google
           </a>
@@ -260,12 +260,12 @@ const SignIn = () => {
           </button>
         </div>
 
-        <p className="mt-8 text-xs font-light text-center text-gray-400">
-          Don&apos;t have an account?;
+        <p className="mt-8 text-xs font-light text-center text-gray-400 dark:text-white">
+          Don&apos;t have an account?{" "}
           <Link
             to="/registration"
             state={from} // Pass the location state
-            className="font-medium text-gray-700 hover:underline"
+            className="font-medium text-gray-700 hover:underline dark:text-white"
           >
             Register an Account
           </Link>
