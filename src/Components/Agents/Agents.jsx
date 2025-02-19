@@ -40,7 +40,7 @@ const Agents = () => {
 
   return (
     <Fade triggerOnce={true} delay={300}>
-      <section className="bg-primaryColor">
+      <section className="bg-primaryColor dark:bg-[#323e4f]">
         <div className="w-11/12 md:w-9/12 mx-auto  py-16 md:py-32">
           <div className="text-center pb-10 md:pb-20 w-11/12 md:w-5/12 mx-auto">
             <h3 className="text-3xl md:text-5xl font-light text-white mb-4 ">
@@ -56,7 +56,7 @@ const Agents = () => {
             {agents.map((agent) => (
               <div
                 key={agent.email}
-                className="relative border border-[#e7e7e7]   flex flex-col items-center bg-white"
+                className="relative border border-[#e7e7e7]   flex flex-col items-center bg-white dark:bg-gray-800 dark:border-[#323e4f]"
               >
                 <img
                   src={agent.photo}
@@ -65,8 +65,10 @@ const Agents = () => {
                 />
 
                 <div className="agent-info text-center">
-                  <h3 className="text-lg font-medium">{agent.name}</h3>
-                  <p className="text-xs mb-4">{agent.email}</p>
+                  <h3 className="text-lg font-medium dark:text-white">
+                    {agent.name}
+                  </h3>
+                  <p className="text-xs mb-4 dark:text-[#ccc]">{agent.email}</p>
                 </div>
 
                 <div className="agent-social absolute top-1 right-1 flex flex-col space-y-2">

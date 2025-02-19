@@ -34,8 +34,8 @@ const Reviews = () => {
   if (error) return <div>Error loading reviews!</div>;
 
   return (
-    <Fade triggerOnce={true} delay={300}>
-      <section className="bg-sectionBgColor py-16 md:py-32">
+    <section className="bg-sectionBgColor py-16 md:py-32 dark:bg-gray-800">
+      <Fade triggerOnce={true} delay={300}>
         <div className="w-11/12 md:w-9/12 mx-auto">
           <SectionHeader
             heading="Clients Testimonials"
@@ -67,8 +67,8 @@ const Reviews = () => {
             ))}
           </Swiper>
         </div>
-      </section>
-    </Fade>
+      </Fade>
+    </section>
   );
 };
 
