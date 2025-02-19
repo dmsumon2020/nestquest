@@ -9,6 +9,7 @@ import { BiDownArrow } from "react-icons/bi";
 import "./header.css";
 import useUserRole from "../../../Hooks/useUserRole";
 import { GridLoader } from "react-spinners";
+import ThemeToggle from "../../ThemeToggle/ThemeToggle";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -260,6 +261,7 @@ const Header = () => {
                   Registration
                 </NavLink>
               )}
+              <ThemeToggle />
             </div>
 
             <div className="flex items-center mt-4 lg:mt-0">
