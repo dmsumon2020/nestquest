@@ -78,12 +78,14 @@ const ManageReviews = () => {
 
   return (
     <div className="w-10/12 mx-auto">
-      <h2 className="text-5xl font-thin text-center pb-10">Manage Reviews</h2>
+      <h2 className="text-5xl font-thin text-center pb-10 dark:text-white">
+        Manage Reviews
+      </h2>
       <div className="reviews-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {reviews.map((review) => (
           <div
             key={review._id}
-            className="review-card bg-white rounded shadow-md p-8 hover:shadow-lg flex flex-col justify-center items-center"
+            className="review-card bg-white rounded shadow-md p-8 hover:shadow-lg flex flex-col justify-center items-center dark:bg-[#323e4f]"
           >
             <div className="reviewer-info">
               <img
@@ -92,18 +94,18 @@ const ManageReviews = () => {
                 className="reviewer-image w-20 h-20 rounded-full mx-auto mb-4 border-4 border-primaryColor"
               />
 
-              <h4 className="text-center text-[#7A7A7A]">
+              <h4 className="text-center text-[#7A7A7A] dark:text-[#ccc]">
                 {review.reviewerName}
               </h4>
-              <p className="text-center mb-2 text-lg font-bold text-black">
+              <p className="text-center mb-2 text-lg font-bold text-black dark:text-white">
                 {review.reviewerEmail}
               </p>
             </div>
-            <p className="text-center pt-9 text-[#636363]">
+            <p className="text-center pt-9 text-[#636363] dark:text-[#ccc]">
               {review.reviewDescription}
             </p>
             <button
-              className="delete-button mt-5 px-6 py-3 text-white font-semibold rounded-lg border bg-red-600 hover:opacity-80 transition-all duration-300 ease-in-out"
+              className="delete-button mt-5 px-6 py-3 text-white font-semibold rounded-lg border bg-red-600 hover:opacity-80 transition-all duration-300 ease-in-out dark:border-gray-800"
               onClick={() => handleDelete(review._id)}
               disabled={deleteReviewMutation.isLoading}
             >

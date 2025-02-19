@@ -75,7 +75,7 @@ const ManageProperties = () => {
 
   return (
     <div className="overflow-x-auto">
-      <h2 className="text-5xl font-thin text-center pb-10">
+      <h2 className="text-5xl font-thin text-center pb-10 dark:text-white">
         Manage Properties
       </h2>
       <table className="table-auto w-full border-collapse border border-primaryColor text-left text-s bg-white">
@@ -107,26 +107,26 @@ const ManageProperties = () => {
         <tbody>
           {properties.map((property) => (
             <tr key={property._id}>
-              <td className="border border-primaryColor px-4 py-2">
+              <td className="border border-primaryColor px-4 py-2 dark:bg-[#323e4f] dark:text-[#ccc]">
                 {property.title}
               </td>
-              <td className="border border-primaryColor px-4 py-2">
+              <td className="border border-primaryColor px-4 py-2 dark:bg-[#323e4f] dark:text-[#ccc]">
                 {property.location}
               </td>
-              <td className="border border-primaryColor px-4 py-2">
+              <td className="border border-primaryColor px-4 py-2 dark:bg-[#323e4f] dark:text-[#ccc]">
                 {property.agentName}
               </td>
-              <td className="border border-primaryColor px-4 py-2">
+              <td className="border border-primaryColor px-4 py-2 dark:bg-[#323e4f] dark:text-[#ccc]">
                 {property.agentEmail}
               </td>
-              <td className="border border-primaryColor px-4 py-2">
+              <td className="border border-primaryColor px-4 py-2 dark:bg-[#323e4f] dark:text-[#ccc]">
                 ${property.minimumPrice} - ${property.maximumPrice}
               </td>
-              <td className="border border-primaryColor px-4 py-2">
+              <td className="border border-primaryColor px-4 py-2 dark:bg-[#323e4f] dark:text-[#ccc]">
                 {property.verificationStatus.charAt(0).toUpperCase() +
                   property.verificationStatus.slice(1)}
               </td>
-              <td className="border border-primaryColor px-4 py-2">
+              <td className="border border-primaryColor px-4 py-2 dark:bg-[#323e4f] dark:text-[#ccc]">
                 {property.verificationStatus === "pending" ? (
                   <>
                     <button

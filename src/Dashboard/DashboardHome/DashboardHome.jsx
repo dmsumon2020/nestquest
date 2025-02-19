@@ -16,12 +16,14 @@ const DashboardHome = () => {
   if (isError) return <p>Error fetching user role</p>;
 
   return (
-    <div className="p-8">
-      <h2 className="text-5xl font-thin">
+    <div className="p-8 ">
+      <h2 className="text-5xl font-thin dark:text-white">
         Welcome to <span className="font-bold capitalize">{role}</span>{" "}
         Dashboard : {user?.displayName}
       </h2>
-      <p className="mt-10 text-xl font-bold text-black">You role is : {role}</p>
+      <p className="mt-10 text-xl font-bold text-black dark:text-white">
+        You role is : {role}
+      </p>
     </div>
   );
 };

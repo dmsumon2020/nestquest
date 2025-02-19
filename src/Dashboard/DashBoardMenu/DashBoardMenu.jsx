@@ -39,7 +39,7 @@ const DashBoardMenu = () => {
 
   return (
     <section className="flex flex-col lg:flex-row">
-      <aside className="flex flex-col lg:w-64 h-screen px-5 py-8 overflow-y-auto bg-white border-r rtl:border-r-0 rtl:border-l">
+      <aside className="flex flex-col lg:w-64 h-screen px-5 py-8 overflow-y-auto bg-white border-r rtl:border-r-0 rtl:border-l dark:bg-[#323e4f]">
         <a onClick={handleLogoClick} className="cursor-pointer">
           <img className="w-auto h-7" src={logo} alt="Logo" />
         </a>
@@ -58,14 +58,14 @@ const DashBoardMenu = () => {
                   src={user?.photoURL}
                   alt="avatar"
                 />
-                <span className="text-sm font-medium text-gray-700">
+                <span className="text-sm font-medium text-gray-700 dark:text-white">
                   {user?.displayName}
                 </span>
               </a>
 
               <Link
                 to="/dashboard"
-                className="text-gray-500 transition-colors duration-200 rotate-180 rtl:rotate-0 hover:text-blue-500"
+                className="text-gray-500 transition-colors duration-200 rotate-180 rtl:rotate-0 hover:text-blue-500 dark:text-white"
               >
                 <FaCog className="w-5 h-5" />
               </Link>
@@ -75,7 +75,7 @@ const DashBoardMenu = () => {
       </aside>
 
       {/* dashboard content */}
-      <section className="flex-1 md:p-8 bg-sectionBgColor">
+      <section className="flex-1 md:p-8 bg-sectionBgColor dark:bg-gray-800">
         <Outlet />
       </section>
     </section>

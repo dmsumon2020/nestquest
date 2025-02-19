@@ -184,7 +184,10 @@ const SignIn = () => {
 
         <form className="mt-6" onSubmit={handleUserLogin}>
           <div>
-            <label htmlFor="email" className="block text-sm text-gray-800">
+            <label
+              htmlFor="email"
+              className="block text-sm text-gray-800 dark:text-white"
+            >
               Email
             </label>
             <input
@@ -201,7 +204,10 @@ const SignIn = () => {
 
           <div className="mt-4">
             <div className="flex items-center justify-between">
-              <label htmlFor="password" className="block text-sm text-gray-800">
+              <label
+                htmlFor="password"
+                className="block text-sm text-gray-800 dark:text-white"
+              >
                 Password
               </label>
               <a

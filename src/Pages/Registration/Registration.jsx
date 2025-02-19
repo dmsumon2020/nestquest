@@ -240,20 +240,23 @@ const Registration = () => {
           </h3>
         </div>
 
-        <div className="w-full max-w-sm p-6 m-auto mx-auto bg-white rounded-lg shadow-md">
+        <div className="w-full max-w-sm p-6 m-auto mx-auto bg-white rounded-lg shadow-md dark:bg-gray-800">
           <div className="flex justify-center mx-auto">
             <img className="w-auto h-7 sm:h-8" src={logo} alt="" />
           </div>
 
           <form onSubmit={handleCreateUser} className="mt-6">
             <div>
-              <label htmlFor="username" className="block text-sm text-gray-800">
+              <label
+                htmlFor="username"
+                className="block text-sm text-gray-800 dark:text-white"
+              >
                 Name
               </label>
               <input
                 type="text"
                 name="username"
-                className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border rounded-lg focus:border-primaryColorHover focus:ring-primaryColor focus:outline-none focus:ring focus:ring-opacity-40"
+                className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border rounded-lg focus:border-primaryColorHover focus:ring-primaryColor focus:outline-none focus:ring focus:ring-opacity-40 dark:bg-[#323e4f] dark:text-white"
               />
               {errors.username && (
                 <p className="mt-2 text-sm text-red-600">{errors.username}</p>
@@ -261,13 +264,16 @@ const Registration = () => {
             </div>
 
             <div className="mt-4">
-              <label htmlFor="email" className="block text-sm text-gray-800">
+              <label
+                htmlFor="email"
+                className="block text-sm text-gray-800 dark:text-white"
+              >
                 Email
               </label>
               <input
                 type="email"
                 name="email"
-                className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border rounded-lg focus:border-primaryColorHover focus:ring-primaryColor focus:outline-none focus:ring focus:ring-opacity-40"
+                className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border rounded-lg focus:border-primaryColorHover focus:ring-primaryColor focus:outline-none focus:ring focus:ring-opacity-40 dark:bg-[#323e4f] dark:text-white"
               />
               {errors.email && (
                 <p className="mt-2 text-sm text-red-600">{errors.email}</p>
@@ -275,14 +281,17 @@ const Registration = () => {
             </div>
 
             <div className="mt-4">
-              <label htmlFor="photoUrl" className="block text-sm text-gray-800">
+              <label
+                htmlFor="photoUrl"
+                className="block text-sm text-gray-800 dark:text-white"
+              >
                 Photo Upload
               </label>
               <input
                 type="file"
                 name="photoUrl"
                 accept="image/*" // Restrict file types to images only
-                className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border rounded-lg focus:border-primaryColorHover focus:ring-primaryColor focus:outline-none focus:ring focus:ring-opacity-40"
+                className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border rounded-lg focus:border-primaryColorHover focus:ring-primaryColor focus:outline-none focus:ring focus:ring-opacity-40 dark:bg-[#323e4f] dark:text-white"
               />
               {errors.photoUrl && (
                 <p className="mt-2 text-sm text-red-600">{errors.photoUrl}</p>
@@ -293,7 +302,7 @@ const Registration = () => {
               <div className="flex items-center justify-between">
                 <label
                   htmlFor="password"
-                  className="block text-sm text-gray-800"
+                  className="block text-sm text-gray-800 dark:text-white"
                 >
                   Password
                 </label>
@@ -302,7 +311,7 @@ const Registration = () => {
               <input
                 type="password"
                 name="password"
-                className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border rounded-lg focus:border-primaryColorHover focus:ring-primaryColor focus:outline-none focus:ring focus:ring-opacity-40"
+                className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border rounded-lg focus:border-primaryColorHover focus:ring-primaryColor focus:outline-none focus:ring focus:ring-opacity-40 dark:bg-[#323e4f] dark:text-white"
               />
               {errors.password && (
                 <p className="mt-2 text-sm text-red-600">{errors.password}</p>
@@ -313,7 +322,7 @@ const Registration = () => {
               <div className="flex items-center justify-between">
                 <label
                   htmlFor="confirmPassword"
-                  className="block text-sm text-gray-800"
+                  className="block text-sm text-gray-800 dark:text-white"
                 >
                   Confirm Password
                 </label>
@@ -322,7 +331,7 @@ const Registration = () => {
               <input
                 type="password"
                 name="confirmPassword"
-                className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border rounded-lg focus:border-primaryColorHover focus:ring-primaryColor focus:outline-none focus:ring focus:ring-opacity-40"
+                className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border rounded-lg focus:border-primaryColorHover focus:ring-primaryColor focus:outline-none focus:ring focus:ring-opacity-40 dark:bg-[#323e4f] dark:text-white"
               />
               {errors.confirmPassword && (
                 <p className="mt-2 text-sm text-red-600">

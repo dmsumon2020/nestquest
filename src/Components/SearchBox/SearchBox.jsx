@@ -1,6 +1,6 @@
 const SearchBox = ({ searchTerm, setSearchTerm }) => {
   return (
-    <section className="bg-[#F7F7F7]">
+    <section className="bg-[#F7F7F7] dark:bg-gray-800">
       <div className="pb-4 w-9/12 mx-auto">
         <input
           type="text"

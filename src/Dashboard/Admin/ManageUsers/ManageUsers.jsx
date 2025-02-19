@@ -221,7 +221,9 @@ const ManageUsers = () => {
 
   return (
     <div className="overflow-x-auto">
-      <h2 className="text-5xl font-thin text-center pb-10">Manage Users</h2>
+      <h2 className="text-5xl font-thin text-center pb-10 dark:text-white">
+        Manage Users
+      </h2>
       <table className="table-auto w-full border-collapse border border-primaryColor text-left text-sm bg-white">
         <thead>
           <tr className="bg-gray-100">
@@ -239,7 +241,7 @@ const ManageUsers = () => {
         <tbody>
           {users.map((user) => (
             <tr key={user._id}>
-              <td className="border border-primaryColor px-4 py-2">
+              <td className="border border-primaryColor px-4 py-2 dark:bg-[#323e4f] dark:text-[#ccc]">
                 <div className="flex items-center space-x-3">
                   <img
                     src={user.image}
@@ -249,10 +251,10 @@ const ManageUsers = () => {
                   <span>{user.user}</span>
                 </div>
               </td>
-              <td className="border border-primaryColor px-4 py-2">
+              <td className="border border-primaryColor px-4 py-2 dark:bg-[#323e4f] dark:text-[#ccc]">
                 {user.email}
               </td>
-              <td className="border border-primaryColor px-4 py-2 space-y-2">
+              <td className="border border-primaryColor px-4 py-2 space-y-2 dark:bg-[#323e4f] dark:text-[#ccc]">
                 {user.fraud === "yes" ? (
                   <p className="text-red-500 font-bold inline-block mr-2">
                     Fraud

@@ -9,7 +9,7 @@ const AllPropertiesPage = () => {
   return (
     <>
       <Fade triggerOnce={true} delay={300}>
-        <section className="bg-[#F7F7F7] pt-20">
+        <section className="bg-[#F7F7F7] pt-20 dark:bg-gray-800">
           <SectionHeader
             heading="All Properties"
             subHeading="Explore over 2000 properties for rent, listed by the top agents nationwide, offering options for every lifestyle and budget."

@@ -46,7 +46,7 @@ const DashboardLinksAdmin = () => {
           key={index}
           to={link.to}
           className={({ isActive }) =>
-            `flex items-center px-3 py-2 text-gray-600 transition-colors duration-300 transform rounded-lg  ${
+            `flex items-center px-3 py-2 text-gray-600 transition-colors duration-300 transform rounded-lg dark:text-white  ${
               isActive
                 ? "bg-primaryColor text-white"
                 : "hover:bg-primaryColor hover:text-white"

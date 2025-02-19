@@ -51,7 +51,7 @@ const AllProperties = ({ searchTerm }) => {
   if (error) return <div>Error loading data!</div>;
 
   return (
-    <section className="bg-[#F7F7F7] py-10">
+    <section className="bg-[#F7F7F7] py-10 dark:bg-gray-800">
       <div className="section-wrap w-11/12 lg:w-9/12 mx-auto">
         {/* section header */}
 

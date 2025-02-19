@@ -132,12 +132,12 @@ const PropertyDetails = () => {
     );
 
   return (
-    <section className="bg-[#F7F7F7]">
+    <section className="bg-[#F7F7F7] dark:bg-gray-800">
       <div className="details-header w-11/12 md:w-9/12 mx-auto ">
-        <h2 className="text-4xl text-headingColor capitalize mb-4 pt-16">
+        <h2 className="text-4xl text-headingColor capitalize mb-4 pt-16 dark:text-white">
           {property.title}
         </h2>
-        <div className="property-labels mt-2 mb-10">
+        <div className="property-labels mt-2 mb-10 ">
           {property.featured === "yes" && (
             <span className="py-1 px-3 bg-primaryColor text-white uppercase text-xs font-medium mr-2">
               Featured
@@ -150,7 +150,7 @@ const PropertyDetails = () => {
             {property.verificationStatus}
           </span>
         </div>
-        <address className="flex flex-row items-center gap-2 text-[#222222] font-light text-xl">
+        <address className="flex flex-row items-center gap-2 text-[#222222] font-light text-xl dark:text-white">
           <MdLocationPin />
           <span>{property.location}</span>
         </address>
@@ -164,10 +164,10 @@ const PropertyDetails = () => {
             </div>
           </Fade>
           <Fade triggerOnce={true} delay={400}>
-            <div className="facts px-5 md:px-10 py-10  bg-white mt-8 text-headingColor text-xl">
-              <h2>Facts and Features </h2>
+            <div className="facts px-5 md:px-10 py-10  bg-white mt-8 text-headingColor text-xl dark:bg-[#323e4f] ">
+              <h2 className="dark:text-white">Facts and Features </h2>
 
-              <div className="text-[#6D7881] py-10 ">
+              <div className="text-[#6D7881] py-10 dark:text-white">
                 <div className="flex flex-col md:flex-row items-center  justify-around gap-10">
                   <p className="flex flex-col  items-center gap-3">
                     <MdOutlineCategory className="text-xl md:text-4xl" />
@@ -200,8 +200,8 @@ const PropertyDetails = () => {
             </div>
           </Fade>
           <Fade triggerOnce={true} delay={400}>
-            <div className="facts px-5 md:px-10 py-10 bg-white mt-8 text-headingColor text-xl">
-              <h2>Price Range </h2>
+            <div className="facts px-5 md:px-10 py-10 bg-white mt-8 text-headingColor text-xl dark:bg-[#323e4f]">
+              <h2 className="dark:text-white">Price Range </h2>
               <div className=" flex flex-row gap-10 items-center text-white bg-primaryColor border border-primaryColor px-5 md:px-10 py-10 mt-10 font-bold">
                 <p className="font-bold">
                   Price Range: ${property.minimumPrice.toLocaleString()} - $
@@ -211,16 +211,16 @@ const PropertyDetails = () => {
             </div>
           </Fade>
           <Fade triggerOnce={true} delay={400}>
-            <div className="facts px-5 md:px-10 py-10 bg-white mt-8 text-headingColor">
-              <h2 className="text-xl">Description </h2>
-              <p className="text-bodyColor font-light mt-10">
+            <div className="facts px-5 md:px-10 py-10 bg-white mt-8 text-headingColor dark:bg-[#323e4f]">
+              <h2 className="text-xl dark:text-white">Description </h2>
+              <p className="text-bodyColor font-light mt-10 dark:text-[#ccc]">
                 {property?.description}
               </p>
             </div>
           </Fade>
           <Fade triggerOnce={true} delay={400}>
-            <div className="facts px-5 md:px-10 py-10 bg-white mt-8 text-headingColor text-xl">
-              <h2>Location </h2>
+            <div className="facts px-5 md:px-10 py-10 bg-white mt-8 text-headingColor text-xl dark:bg-[#323e4f]">
+              <h2 className="dark:text-white">Location </h2>
               <div className=" flex flex-row gap-10 items-center bg-[#E5F7FF] border border-primaryColor px-5 md:px-10 py-10 mt-10 font-bold">
                 <p className="font-light">
                   <span className="font-bold">City :</span> {property?.city}
@@ -270,10 +270,10 @@ const PropertyDetails = () => {
 
         {/* Right Sidebar */}
 
-        <div className="w-full lg:w-3/12 bg-white px-8 md:px-10 py-8">
+        <div className="w-full lg:w-3/12 bg-white px-8 md:px-10 py-8 dark:bg-[#323e4f]">
           <Fade triggerOnce={true} delay={400}>
             <div className="agent-info">
-              <h3 className="text-lg font-semibold mb-3 text-center">
+              <h3 className="text-lg font-semibold mb-3 text-center dark:text-white">
                 Agent Information
               </h3>
               <img
@@ -281,13 +281,15 @@ const PropertyDetails = () => {
                 alt={property.agentName}
                 className="w-32 h-32  mt-4 object-cover mx-auto"
               />
-              <p className="text-gray-800 mt-10">
+              <p className="text-gray-800 mt-10 dark:text-white">
                 Name: <span className="font-medium">{property.agentName}</span>
               </p>
-              <p className="text-gray-600 mt-1">Email: {property.agentEmail}</p>
+              <p className="text-gray-600 mt-1 dark:text-white">
+                Email: {property.agentEmail}
+              </p>
 
               {property.verificationStatus && (
-                <p className="mt-2 text-green-600 font-medium">Verified</p>
+                <p className="mt-2 text-green-600 font-medium ">Verified</p>
               )}
             </div>
           </Fade>

@@ -88,7 +88,7 @@ const AdvertiseProperty = () => {
 
   return (
     <div className="p-4">
-      <h2 className="text-5xl font-thin text-center pb-10">
+      <h2 className="text-5xl font-thin text-center pb-10 dark:text-white">
         Advertise Properties
       </h2>
       <div className="overflow-x-auto">
@@ -118,27 +118,27 @@ const AdvertiseProperty = () => {
           <tbody>
             {properties.map((property) => (
               <tr key={property._id}>
-                <td className="border border-primaryColor px-4 py-2">
+                <td className="border border-primaryColor px-4 py-2 dark:bg-[#323e4f] dark:text-[#ccc]">
                   <img
                     src={property.image}
                     alt={property.title}
                     className="w-16 h-16 object-cover"
                   />
                 </td>
-                <td className="border border-primaryColor px-4 py-2">
+                <td className="border border-primaryColor px-4 py-2 dark:bg-[#323e4f] dark:text-[#ccc]">
                   {property.title}
                 </td>
-                <td className="border border-primaryColor px-4 py-2">
+                <td className="border border-primaryColor px-4 py-2 dark:bg-[#323e4f] dark:text-[#ccc]">
                   {property.agentName}
                 </td>
-                <td className="border border-primaryColor px-4 py-2">
+                <td className="border border-primaryColor px-4 py-2 dark:bg-[#323e4f] dark:text-[#ccc]">
                   ${property.minimumPrice.toLocaleString()} - $
                   {property.maximumPrice.toLocaleString()}
                 </td>
-                <td className="border border-primaryColor px-4 py-2">
+                <td className="border border-primaryColor px-4 py-2 dark:bg-[#323e4f] dark:text-[#ccc]">
                   {property.verificationStatus}
                 </td>
-                <td className="border border-primaryColor px-4 py-2">
+                <td className="border border-primaryColor px-4 py-2 dark:bg-[#323e4f] ">
                   <button
                     onClick={() => handleToggleFeaturedStatus(property)}
                     className={`px-4 py-2 rounded ${

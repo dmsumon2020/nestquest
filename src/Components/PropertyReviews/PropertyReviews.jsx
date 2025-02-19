@@ -33,12 +33,12 @@ const PropertyReviews = ({ propertyId }) => {
 
   return (
     <section className="mt-8">
-      <h3 className="text-xl font-bold mb-4">Reviews</h3>
-      <div className="space-y-4">
+      <h3 className="text-xl font-bold mb-4 dark:text-white">Reviews</h3>
+      <div className="space-y-4 ">
         {reviews.map((review) => (
           <div
             key={review._id}
-            className="p-4 border rounded shadow-sm bg-gray-50"
+            className="p-4 border rounded shadow-sm bg-gray-50 dark:bg-[#323e4f] dark:border-[#323e4f]"
           >
             <div className="flex items-center mb-2">
               <img
@@ -47,11 +47,17 @@ const PropertyReviews = ({ propertyId }) => {
                 className="w-12 h-12 rounded-full mr-4"
               />
               <div>
-                <p className="font-medium">{review.reviewerName}</p>
-                <p className="text-sm text-gray-500">{review.propertyTitle}</p>
+                <p className="font-medium dark:text-white">
+                  {review.reviewerName}
+                </p>
+                <p className="text-sm text-gray-500 dark:text-[#ccc]">
+                  {review.propertyTitle}
+                </p>
               </div>
             </div>
-            <p className="text-gray-700">{review.reviewDescription}</p>
+            <p className="text-gray-700 dark:text-[#ccc]">
+              {review.reviewDescription}
+            </p>
           </div>
         ))}
       </div>

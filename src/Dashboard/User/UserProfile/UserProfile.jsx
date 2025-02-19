@@ -36,16 +36,20 @@ const UserProfile = () => {
   }
 
   return (
-    <div className="p-6 max-w-md mx-auto bg-white rounded-lg shadow-md">
-      <h2 className="text-xl font-bold mb-4">My Profile</h2>
+    <div className="p-6 max-w-md mx-auto bg-white rounded-lg shadow-md dark:bg-[#323e4f]">
+      <h2 className="text-xl font-bold mb-4 dark:text-white">My Profile</h2>
       <img
         src={user[0]?.image}
         alt={`${user[0]?.user}'s profile`}
         className="w-24 h-24 rounded-full mx-auto mb-4"
       />
-      <h3 className="text-lg font-medium text-gray-800">{user[0]?.user}</h3>
-      <p className="text-gray-600">{user[0]?.email}</p>
-      <p className="text-gray-500 text-sm">Role: {user[0]?.role}</p>
+      <h3 className="text-lg font-medium text-gray-800 dark:text-white">
+        {user[0]?.user}
+      </h3>
+      <p className="text-gray-600 dark:text-[#ccc]">{user[0]?.email}</p>
+      <p className="text-gray-500 text-sm dark:text-[#ccc]">
+        Role: {user[0]?.role}
+      </p>
     </div>
   );
 };

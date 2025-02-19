@@ -304,11 +304,13 @@ const Header = () => {
                     />
                   </div>
 
-                  <h3 className="mx-2 text-gray-700 lg:hiddenX">
+                  <h3 className="mx-2 text-gray-700 lg:hiddenX dark:text-white">
                     {user?.displayName}
                   </h3>
 
-                  {user && <BiDownArrow className="text-lg font-bold" />}
+                  {user && (
+                    <BiDownArrow className="text-lg font-bold dark:text-white" />
+                  )}
                 </button>
 
                 {isDropdownOpen && user && (
