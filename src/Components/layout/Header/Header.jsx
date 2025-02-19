@@ -15,9 +15,10 @@ const Header = () => {
   const { userLogOut, user } = useAuth();
   const location = useLocation(); // Get current location
   const navigate = useNavigate(); // Navigate programmatically
-  //const { role, isLoading, isError, refetch } = useUserRole(user?.email);
+  const { role, isLoading, isError, refetch } = useUserRole(user?.email);
 
-  //const { role, isLoading, isError, refetch } = useUserRole(email || "");
+  //const { role, isLoading, isError, refetch } = useUserRole(user?.email || "");
+  console.log(role);
 
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const handleProfileImageClick = () => {
@@ -311,7 +312,7 @@ const Header = () => {
                 {isDropdownOpen && (
                   <div className="absolute left-0 mt-2 w-48 bg-white border border-gray-300 rounded-md shadow-lg z-10">
                     <ul className="py-1">
-                      {/* {role === "admin" &&
+                      {role === "admin" &&
                         dashboardLinksAdmin.map((link, index) => (
                           <li key={index}>
                             <Link
@@ -322,8 +323,8 @@ const Header = () => {
                               {link.label}
                             </Link>
                           </li>
-                        ))} */}
-                      {/* {role === "agent" &&
+                        ))}
+                      {role === "agent" &&
                         dashboardLinksAgent.map((link, index) => (
                           <li key={index}>
                             <Link
@@ -334,8 +335,8 @@ const Header = () => {
                               {link.label}
                             </Link>
                           </li>
-                        ))} */}
-                      {/* {(role === "user" || role === undefined) &&
+                        ))}
+                      {role === "user" &&
                         dashboardLinksUser.map((link, index) => (
                           <li key={index}>
                             <Link
@@ -345,7 +346,7 @@ const Header = () => {
                               {link.label}
                             </Link>
                           </li>
-                        ))} */}
+                        ))}
                     </ul>
                   </div>
                 )}
