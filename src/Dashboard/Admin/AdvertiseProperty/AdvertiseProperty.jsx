@@ -141,10 +141,10 @@ const AdvertiseProperty = () => {
                 <td className="border border-primaryColor px-4 py-2 dark:bg-[#323e4f] ">
                   <button
                     onClick={() => handleToggleFeaturedStatus(property)}
-                    className={`px-4 py-2 rounded ${
+                    className={`px-3 py-2 text-center font-semibold rounded-lg border  transition-all duration-300 ease-in-out ${
                       property.featured === "yes"
-                        ? "bg-green-200"
-                        : "bg-gray-200"
+                        ? "text-[#009868] border-[#009868] hover:bg-[#009868] hover:text-white"
+                        : "text-primaryColor border-primaryColor hover:bg-primaryColor hover:text-white"
                     }`}
                   >
                     {property.featured === "yes" ? "Yes" : "No"}

@@ -105,7 +105,7 @@ const ManageReviews = () => {
               {review.reviewDescription}
             </p>
             <button
-              className="delete-button mt-5 px-6 py-3 text-white font-semibold rounded-lg border bg-red-600 hover:opacity-80 transition-all duration-300 ease-in-out dark:border-gray-800"
+              className="delete-button mt-5 px-3 py-2 text-center text-primaryColor font-semibold rounded-lg border border-primaryColor hover:bg-primaryColor transition-all duration-300 ease-in-out hover:text-white"
               onClick={() => handleDelete(review._id)}
               disabled={deleteReviewMutation.isLoading}
             >

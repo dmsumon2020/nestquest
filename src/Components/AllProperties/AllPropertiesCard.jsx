@@ -14,15 +14,15 @@ const AllPropertiesCard = ({ property }) => {
       <div className="p-4">
         <div>
           {property.featured === "yes" && (
-            <span className="text-[#009868] text-xs bg-[#E5F5EF] py-1 px-3 mr-2 dark:bg-[#a4a4a4] dark:text-white">
+            <span className="text-primaryColor text-xs bg-[#EBF9FF] py-1 px-3 mr-2 dark:bg-[#a4a4a4] dark:text-white">
               Featured
             </span>
           )}{" "}
-          <span className="text-[#FF385C] text-xs bg-[#FFEAEE] py-1 px-3 mr-2 dark:bg-[#a4a4a4] dark:text-white">
+          <span className="text-primaryColor text-xs bg-[#EBF9FF] py-1 px-3 mr-2 dark:bg-[#a4a4a4] dark:text-white">
             {property.propertyType}
           </span>{" "}
           {property.verificationStatus === "verified" && (
-            <span className="text-[#7d2eff] text-xs bg-[#7d2eff33] py-1 px-3 mr-2 dark:bg-[#a4a4a4] dark:text-white">
+            <span className="text-[#009868] text-xs bg-[#E5F5EF] py-1 px-3 mr-2 dark:bg-[#a4a4a4] dark:text-white">
               Verified
             </span>
           )}{" "}

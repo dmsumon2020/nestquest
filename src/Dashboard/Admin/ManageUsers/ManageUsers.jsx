@@ -263,10 +263,10 @@ const ManageUsers = () => {
                   <>
                     <button
                       onClick={() => handleMakeAdmin(user._id)}
-                      className={`px-3 py-1 rounded focus:outline-none mr-2 ${
+                      className={`px-3 py-2 text-center text-primaryColor font-semibold rounded-lg border border-primaryColor hover:bg-primaryColor transition-all duration-300 ease-in-out hover:text-white ${
                         user.role === "admin"
-                          ? "bg-gray-400 text-gray-700 cursor-not-allowed"
-                          : "bg-blue-500 text-white hover:bg-blue-600"
+                          ? "bg-primaryColor text-white cursor-not-allowed"
+                          : ""
                       }`}
                       disabled={user.role === "admin"}
                     >
@@ -274,31 +274,31 @@ const ManageUsers = () => {
                     </button>
                     <button
                       onClick={() => handleMakeAgent(user._id)}
-                      className={`px-3 py-1 rounded focus:outline-none mr-2 ${
+                      className={`px-3 py-2 ml-2 text-center text-[#009868] font-semibold rounded-lg border border-[#009868] hover:bg-[#009868] transition-all duration-300 ease-in-out hover:text-white ${
                         user.role === "agent"
-                          ? "bg-gray-400 text-gray-700 cursor-not-allowed"
-                          : "bg-green-500 text-white hover:bg-green-600"
+                          ? "bg-[#009868] text-white cursor-not-allowed"
+                          : ""
                       }`}
                       disabled={user.role === "agent"}
                     >
                       {user.role === "agent" ? "Already Agent" : "Make Agent"}
                     </button>
+                    <button
+                      onClick={() => handleDeleteUser(user._id)}
+                      className="px-3 py-2 ml-2 text-center text-primaryColor font-semibold rounded-lg border border-primaryColor hover:bg-primaryColor transition-all duration-300 ease-in-out hover:text-white"
+                    >
+                      Delete User
+                    </button>
                     {user.role === "agent" && (
                       <button
                         onClick={() => handleMakeFraud(user._id)}
-                        className="bg-yellow-500 text-white px-3 py-1 rounded hover:bg-yellow-600 focus:outline-none mr-2"
+                        className="px-3 py-2 ml-2 text-center text-[#009868] font-semibold rounded-lg border border-[#009868] hover:bg-[#009868] transition-all duration-300 ease-in-out hover:text-white"
                       >
                         Mark as Fraud
                       </button>
                     )}
                   </>
                 )}
-                <button
-                  onClick={() => handleDeleteUser(user._id)}
-                  className="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600 focus:outline-none"
-                >
-                  Delete User
-                </button>
               </td>
             </tr>
           ))}

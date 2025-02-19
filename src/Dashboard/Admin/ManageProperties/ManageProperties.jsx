@@ -130,7 +130,7 @@ const ManageProperties = () => {
                 {property.verificationStatus === "pending" ? (
                   <>
                     <button
-                      className="bg-green-500 text-white px-3 py-1 rounded hover:bg-green-600 focus:outline-none"
+                      className="px-3 py-2 my-5 text-center text-primaryColor font-semibold rounded-lg border border-primaryColor hover:bg-primaryColor transition-all duration-300 ease-in-out hover:text-white"
                       onClick={() =>
                         handleUpdateStatus(property._id, "verified")
                       }
@@ -138,7 +138,7 @@ const ManageProperties = () => {
                       Verify
                     </button>
                     <button
-                      className="bg-red-500 text-white px-3 py-1 rounded ml-2 hover:bg-red-600 focus:outline-none"
+                      className="px-3 py-2 my-5 ml-2 text-center text-primaryColor font-semibold rounded-lg border border-primaryColor hover:bg-primaryColor transition-all duration-300 ease-in-out hover:text-white"
                       onClick={() =>
                         handleUpdateStatus(property._id, "rejected")
                       }
@@ -150,7 +150,7 @@ const ManageProperties = () => {
                   <span
                     className={`${
                       property.verificationStatus === "verified"
-                        ? "text-green-500"
+                        ? "text-[#009868]"
                         : "text-red-500"
                     } font-bold`}
                   >
