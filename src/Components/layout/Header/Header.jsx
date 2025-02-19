@@ -229,7 +229,7 @@ const Header = () => {
                   key={index}
                   to={link.path}
                   className={({ isActive }) =>
-                    `px-3 py-2 mx-3 mt-2 text-gray-700 dark:text-white transition-colors duration-300 transform rounded-md lg:mt-0 font-bold ${
+                    `px-3 py-2 mx-3 mt-2 text-gray-700 dark:text-white transition-colors duration-300 transform rounded-md lg:mt-0 font-bold dark:hover:bg-[#323e4f] ${
                       isActive ? "text-primaryColor" : "hover:bg-gray-100"
                     }`
                   }
@@ -241,14 +241,14 @@ const Header = () => {
               {user ? (
                 <NavLink
                   onClick={handleUserLogout}
-                  className="px-3 py-2 mx-3 mt-2 text-gray-700 dark:text-white transition-colors duration-300 transform rounded-md lg:mt-0  hover:bg-gray-100 font-bold"
+                  className="px-3 py-2 mx-3 mt-2 text-gray-700 dark:text-white transition-colors duration-300 transform rounded-md lg:mt-0  hover:bg-gray-100 font-bold dark:hover:bg-[#323e4f]"
                 >
                   Logout
                 </NavLink>
               ) : (
                 <NavLink
                   to={"/signin"}
-                  className="px-3 py-2 mx-3 mt-2 text-gray-700 dark:text-white transition-colors duration-300 transform rounded-md lg:mt-0  hover:bg-gray-100 font-bold"
+                  className="px-3 py-2 mx-3 mt-2 text-gray-700 dark:text-white transition-colors duration-300 transform rounded-md lg:mt-0  hover:bg-gray-100 font-bold dark:hover:bg-[#323e4f]"
                 >
                   Signin
                 </NavLink>
@@ -256,7 +256,7 @@ const Header = () => {
               {!user && (
                 <NavLink
                   to={"/registration"}
-                  className="px-3 py-2 mx-3 mt-2 text-gray-700 dark:text-white transition-colors duration-300 transform rounded-md lg:mt-0  hover:bg-gray-100 font-bold"
+                  className="px-3 py-2 mx-3 mt-2 text-gray-700 dark:text-white transition-colors duration-300 transform rounded-md lg:mt-0  hover:bg-gray-100 font-bold dark:hover:bg-[#323e4f]"
                 >
                   Registration
                 </NavLink>
@@ -314,14 +314,14 @@ const Header = () => {
                 </button>
 
                 {isDropdownOpen && user && (
-                  <div className="absolute left-0 mt-2 w-48 bg-white border border-gray-300 rounded-md shadow-lg z-10">
+                  <div className="absolute left-0 mt-2 w-48 bg-white border border-gray-300 rounded-md shadow-lg z-10 dark:bg-gray-800">
                     <ul className="py-1">
                       {role === "admin" &&
                         dashboardLinksAdmin.map((link, index) => (
                           <li key={index}>
                             <Link
                               to={link.to}
-                              className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                              className="block px-4 py-2 text-gray-700 hover:bg-gray-100 dark:text-white dark:hover:bg-[#323e4f]"
                             >
                               {link.label}
                             </Link>
@@ -332,7 +332,7 @@ const Header = () => {
                           <li key={index}>
                             <Link
                               to={link.to}
-                              className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                              className="block px-4 py-2 text-gray-700 hover:bg-gray-100 dark:text-white dark:hover:bg-[#323e4f]"
                             >
                               {link.label}
                             </Link>
@@ -343,7 +343,7 @@ const Header = () => {
                           <li key={index}>
                             <Link
                               to={link.to}
-                              className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                              className="block px-4 py-2 text-gray-700 hover:bg-gray-100 dark:text-white dark:hover:bg-[#323e4f]"
                             >
                               {link.label}
                             </Link>
