@@ -56,7 +56,7 @@ const Agents = () => {
             {agents.map((agent) => (
               <div
                 key={agent.email}
-                className="relative border border-[#e7e7e7]   flex flex-col items-center bg-white dark:bg-gray-800 dark:border-[#323e4f]"
+                className="relative border border-[#e7e7e7] flex flex-col items-center bg-white dark:bg-gray-800 dark:border-[#323e4f]"
               >
                 <img
                   src={agent.photo}

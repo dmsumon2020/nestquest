@@ -4,8 +4,8 @@ import { useNavigate } from "react-router";
 import { useEffect } from "react";
 
 const axiosSecure = axios.create({
-  //baseURL: "https://assignment-12-server-wheat-iota.vercel.app",
-  baseURL: "http://localhost:5000",
+  baseURL: "https://assignment-12-server-wheat-iota.vercel.app",
+  //baseURL: "http://localhost:5000",
 });
 
 const useAxiosSecure = () => {
