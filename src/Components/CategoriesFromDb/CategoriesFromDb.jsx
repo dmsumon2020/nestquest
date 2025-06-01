@@ -74,7 +74,7 @@ const CategoriesFromDb = () => {
                       alt={category?.name}
                     />
                     <div className="category-info absolute bottom-0 left-0 w-full px-6 py-4 z-20 text-white font-bold">
-                      <p className="capitalize font-thin text-white text-5xl ">
+                      <p className="capitalize text-5xl md:text-4xl font-bold text-white leading-tight mb-4">
                         {category?.name}
                       </p>
                     </div>
