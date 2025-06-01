@@ -52,7 +52,7 @@ const PropertyCard = ({ property }) => {
           </p>
         </div>
 
-        <p className="text-xl font-bold text-[#08AEEB] mt-9 pt-4 border-t border-t-[#eee]">
+        <p className="text-xl font-bold text-teal-500 mt-9 pt-4 border-t border-t-[#eee]">
           <Link
             to={`/property-details/${property._id}`}
             className="transition-colors duration-300 ease-in-out hover:text-black"

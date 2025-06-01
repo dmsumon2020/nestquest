@@ -1,3 +1,4 @@
+import AboutUs from "../../Components/AboutUs/AboutUs";
 import Advertisement from "../../Components/Advertisement/Advertisement";
 import Agents from "../../Components/Agents/Agents";
 import CategoriesFromDb from "../../Components/CategoriesFromDb/CategoriesFromDb";
@@ -11,6 +12,7 @@ const Home = () => {
   return (
     <>
       <ImageSlider />
+      <AboutUs />
       <Advertisement />
       <HowItWorks />
       <FinestSelection />

@@ -43,10 +43,10 @@ const Agents = () => {
       <section className="bg-primaryColor dark:bg-[#323e4f]">
         <div className="w-11/12 md:w-9/12 mx-auto  py-16 md:py-32">
           <div className="text-center pb-10 md:pb-20 w-11/12 md:w-5/12 mx-auto">
-            <h3 className="text-3xl md:text-5xl font-light text-white mb-4 ">
+            <h3 className="text-3xl md:text-4xl font-bold text-white leading-tight mb-4 ">
               Our Agents
             </h3>
-            <h4 className="text-white font-light text-lg">
+            <h4 className="text-white text-lg">
               Discover How We’ve Made a Difference: Client Testimonials and
               Success Stories
             </h4>

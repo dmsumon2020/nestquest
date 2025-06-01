@@ -9,7 +9,7 @@ export default {
       },
       colors: {
         bodyColor: "#7A7A7A",
-        primaryColor: "#08AEEB",
+        primaryColor: "#14B8A6",
         headingColor: "#222222",
         sectionBgColor: "#F0F4F7",
         primaryColorHover: "#000",
